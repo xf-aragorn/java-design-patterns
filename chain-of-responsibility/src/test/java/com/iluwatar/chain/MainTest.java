@@ -30,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 /**
  * Application test
  */
-class AppTest {
+class MainTest {
 
   /**
    * Issue: Add at least one assertion to this test case.
