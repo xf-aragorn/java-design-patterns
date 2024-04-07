@@ -27,10 +27,11 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Abstract base class for party members.
+ * 抽象同事类
  */
 @Slf4j
 public abstract class PartyMemberBase implements PartyMember {
-
+  //中介者对象
   protected Party party;
 
   @Override
@@ -38,12 +39,13 @@ public abstract class PartyMemberBase implements PartyMember {
     LOGGER.info("{} joins the party", this);
     this.party = party;
   }
-
+  /** 供中介者对象调用的接口 */
   @Override
   public void partyAction(Action action) {
     LOGGER.info("{} {}", this, action.getDescription());
   }
-
+  /** 具体同事类的行为接口，在抽象类中统一调用中介者接口转发信息
+   * 同时调用同事类自己的行为接口（这里是toString） */
   @Override
   public void act(Action action) {
     if (party != null) {

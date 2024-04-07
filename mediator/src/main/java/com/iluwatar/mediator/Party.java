@@ -24,12 +24,12 @@
 package com.iluwatar.mediator;
 
 /**
- * Party interface.
+ * Party interface. 抽象中介者
  */
 public interface Party {
-
+  /** 同事对象注册接口 */
   void addMember(PartyMember member);
-
+  /** 转发同事对象信息和交互行为 */
   void act(PartyMember actor, Action action);
 
 }

@@ -121,7 +121,7 @@ public final class ApplicationFilterChain implements FilterChain {
         for (ApplicationFilterConfig filter : filters)
             if (filter == filterConfig)
                 return;
-
+        //为什么不直接用ArrayList？ 2023.3.4
         if (n == filters.length) {
             ApplicationFilterConfig[] newFilters =
                     new ApplicationFilterConfig[n + INCREMENT];

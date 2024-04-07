@@ -27,10 +27,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Party implementation.
+ * Party implementation. 具体中介者
  */
 public class PartyImpl implements Party {
-
+  /** 持有各个同事类引用 */
   private final List<PartyMember> members;
 
   public PartyImpl() {

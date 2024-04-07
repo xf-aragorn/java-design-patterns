@@ -47,7 +47,9 @@ public class App {
    * @param args command line args
    */
   public static void main(String[] args) {
+    /** 命令调用者 Invoker */
     var wizard = new Wizard();
+    // 具体的Command,注意：它有几个命令方法，与常规的命令模式不同
     var goblin = new Goblin();
 
     goblin.printStatus();
@@ -57,7 +59,7 @@ public class App {
 
     wizard.castSpell(goblin::changeVisibility);
     goblin.printStatus();
-
+    /** Invoker调用撤销接口 */
     wizard.undoLastSpell();
     goblin.printStatus();
 
